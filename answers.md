@@ -50,6 +50,8 @@ If you were starting a new project and could choose a frontend framework (Backbo
 virtual DOM: 提高renderring速度。
 
 
+![alt tag](https://github.com/jcdby/Answer/blob/master/front-end-trend.png)
+
 为什么选择React而不是其它框架。首先看google的trend比较。react以压倒性的优势领先其它的框架。
 
 Describe 3 to 5 ways you haved improve page load time on your experience. Describe as detailed as possible
