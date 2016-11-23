@@ -20,6 +20,7 @@
 关于网站两点： 
 没有中国相关社交分享服务。（中国市场巨大，本地化的社交分享服务可以是用户有效地分享信息。从而提高我们的知名度。）
 网页加载速度慢
+支付手段（没有针对中国用户的支付宝支付手段，stripe）
 
 
 
@@ -61,6 +62,8 @@ Imagine if you were using an app on your mobile phone and after every tap or swi
 Client-side rendered web apps are different. These apps load the entire payload upfront, so once it’s booted, it has all of the templates, business logic, etc. necessary to respond instantly to a user’s interactions. The only time it needs to confer with a server is to fetch data it hasn’t seen before–and frameworks like Ember make it trivially easy to show a loading spinner while that data loads, keeping the UI responsive so the user knows that their tap or click was received. If the data doesn’t need to be loaded, clicks feel insanely fast.
 
 There’s a misconception that client-rendered JavaScript apps are only useful for more “application-y” sites and not so-called “content” sites; Vine and Bustle are two frequently cited examples. But client-side routing, where you have all of the templates and logic available at the moment of the user’s click, provides performance benefits to every site, and users are beginning to become conditioned to the idea that interactions on the web should be near-instaneous. If you don’t start building for client-side rendering today, my bet is your site is going to feel like a real clunker in just a few years’ time. This is going to be the norm for all sites, and in the not-too-distant-future, server-rendered stuff will feel very “legacy.”
+
+There's one obvious scenario where it makes sense: when you render based on existing data. That is, if you don't need to go to the server to render, say because you are going to display known data in a different perspective, client-side rendering makes sense.
 
 
 
