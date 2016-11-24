@@ -38,6 +38,16 @@ virtual DOM: 提高renderring速度。
 Describe 3 to 5 ways you haved improve page load time on your experience. Describe as detailed as possible
 
 spa的情况，尽量把静态内容页面，没有用户交互的页面使用server rendering 的方式加载。
+下面是在JAVA代码中设置这些参数的方法：
+//不允许浏览器端或缓存服务器缓存当前页面信息。    
+response.setDateHeader("Expires", 0);  
+response.addHeader( "Cache-Control", "no-cache" );
+//本页面允许在浏览器端或缓存服务器中缓存，时限为10秒。
+java.util.Date date = new java.util.Date();  
+response.setDateHeader("Expires",date.getTime()+10000); 
+response.addHeader( "Cache-Control", "max-age=10" ); 
+//设置修改时间
+response.setDateHeader("Last-Modified",date.getTime());
 
 
 What are the advantages of client side rendering vs. server side rendering? If you were building our site which would you use and why?
