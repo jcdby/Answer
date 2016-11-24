@@ -6,7 +6,7 @@
   3.working for famous company
   4.jumping on a ‘Rocket’
   5.make tons of money
-  6.experience in new area
+  -6.experience in new area
   7.(your choice)
 
 ##2.Given the following variables: time, budget, customer happiness and best practices which are most important in a project? Give them an order and explain why based on your experience。
@@ -37,11 +37,17 @@ best practices是满足以上条件的手段。合适的best practice可以有�
 关于网站两点： 
 没有中国相关社交分享服务。（中国市场巨大，本地化的社交分享服务可以是用户有效地分享信息。从而提高我们的知名度。）
 支付手段（没有针对中国用户的支付宝支付手段，stripe）
+以上两个问题的解决方案：雇佣一个有中国本地社交分享api开发经验的中国开发者（我是其中一个有力竞争者）。
+首先，众所周知，在中国无法使用fb和推特。当一个用户发起make，想分享时，由于没有本地的社交分享的支持，将会面临一系列的不方便，用户体验不高，无法通过分享扩大公司的影响力， 无法建立中国本土粉丝生态圈。支付手段同上，没有本土支付手段支持的话，将会给很多想支付的用户带来不方便。所以解决了以上两个问题以后，用户可以通过本地的分享，使更多的人参与到make活动中来，而本土化的便捷支付手段则能够让更多的用户为自己的明星make活动付费。
 网页加载速度慢：
 ![alt tag](https://github.com/jcdby/Answer/blob/master/Screen Shot 2016-11-24 at 1.38.01 PM.png)
 上图是主页加载时的所需时间，等待了将近一秒（经过多次测试，几乎达到了平均800ms的样子。）
+首页发起的request的数量过多。很多图片本身容量不大，下载时间不长，但从发起请求，到开始下载所花的时间比下载本身还长，影响用户体验。
 1.使用css sprites，减少网站对图片的下载请求，以此提高网页的load speed
 2.使用Expire标签，减少网站对图片的下载请求。
+3.优化服务器（服务器性能，服务器距离）。
+通过优化网页的加载速度，可以让更多不同性能设备的用户都能得到最优的体验，不会因为网络延迟等问题错失一些用户权益。
+
 
 
 
@@ -50,6 +56,12 @@ best practices是满足以上条件的手段。合适的best practice可以有�
 
 #FE
 ##1.If you were starting a new project and could choose a frontend framework (Backbone, React, Angular, etc), which would you choose and why? Particularly, what makes this framework better than other choices?
+
+![alt tag](https://github.com/jcdby/Answer/blob/master/Screen Shot 2016-11-24 at 8.23.40 PM.png)
+从最新的谷歌趋势图可以看到，在backbonejs, polymerjs,angular2, reactjs,knockoutjs的比较中，react和angular是较为流行的。更多的开发者使用，意味着开发社区更佳活跃，遇到相关问题时，可以获得更多的支持；更多开发者使用，也体现了开发者对其的认可（性能，生产性，架构等方面。），所以如果我正好要开始一个新的项目时，我就会从最流行的框架中去选择。正好我在过去的开发过程中使用过react和angular2，我会选择angular2.
+
+
+
 
 
 只是用过react和angular2.
@@ -65,6 +77,9 @@ virtual DOM: 提高renderring速度。
 
 
 ![alt tag](https://github.com/jcdby/Answer/blob/master/front-end-trend.png)
+
+
+
 
 为什么选择React而不是其它框架。首先看google的trend比较。react以压倒性的优势领先其它的框架。
 
