@@ -28,6 +28,7 @@ customer happiness > time > budget > best priactices.
 没有中国相关社交分享服务。（中国市场巨大，本地化的社交分享服务可以是用户有效地分享信息。从而提高我们的知名度。）
 支付手段（没有针对中国用户的支付宝支付手段，stripe）
 网页加载速度慢：
+![alt tag](https://github.com/jcdby/Answer/blob/master／Screen Shot 2016-11-24 at 1.38.01 PM.png)
 1.使用css sprites，减少网站对图片的下载请求，以此提高网页的load speed
 2.使用Expire标签，减少网站对图片的下载请求。
 
