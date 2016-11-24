@@ -15,10 +15,20 @@
 使用者满意度是对产品使用者的承诺。
 最佳时间是减少开发时间，减少开发错误，提高用户体验的一种方法。
 
-在这里的customer是指产品的用户，还是指产品的直接使用者？假设是
+
+
+在这里的customer是指产品的用户（产品的启动者，项目经理，老板等等），还是指产品的直接使用者？假设这里的customer是两者。
 
 customer happiness > time > budget > best priactices.
-产品的终极目的是满足用户的需求。若是达不到用户的需求，那一定是失败的产品。就像用户需要的是苹果，你费力做了一个梨，你的梨再甜，也是失败的产品。所以我认为当启动一个产品项目时，应该首先定下产品的用户满足度。
+制造产品的过程就是定义我们要做什么，怎么做的过程。
+分析cuotomer happiness就是定义我们要做的产品是什么的过程。任何一个产品都会有需求，产品的终极目标是满足用户（customer）的需求。若是达不到用户的需求，那一定是失败的产品。就像用户需要的是苹果，你费力做了一个梨，你的梨再甜，也是失败的产品。时间和预算应该是在充分分析产品的需求后，得出的结论（理想状态）。有时候也会遇到老板给了一笔钱作为预算，却不知道该做什么和什么时候做完的情况，就算在这种情况下，也应该首先进行市场调查，了解用户需求，根据预算量入为出，设计产品规划。通过分析costomer happiness，再结合开发团队等开发情况，计算出时间和预算。
+
+所以遵守通过customer happiness 计算出来的时间就自然排在了第二位。时间就是金钱，延长开发时间就是增加开发经费。增加开发费用就无法使customer happy（对于经费固定的情况，增加开发时间，就是减少开发者的收入。）。违反了第一条。所以在计算开发时间时，需要充分分析用户需求。在开发时间有限的情况下，customer happiness也是最重要的。不能使customer高兴，就算遵守了时间完成了项目，也是失败的产品（苹果和梨）。在开发时间有限的情况下，我们更应该仔细分析用户需求，设定customer happiness范围和优先度，以此来规划产品项目。
+
+把经费排在第三位主要是考虑到，时间是不可再生资源，经费可以通过一些手段获得。
+
+best practices是满足以上条件的手段。合适的best practice可以有效地节约开发者的开发时间，减小产品的错误率，提高产品的质量等。但是，假设，我们要做的产品前无古人，还没有任何best practice，那么还将回归到分析customer hapiness的阶段去。就算有很多的practice，要找到合适的best practice也是要回归到分析用户需求和开发团队等因素中去。所以best practice是充分不必要条件。
+
 
 
 
@@ -28,7 +38,8 @@ customer happiness > time > budget > best priactices.
 没有中国相关社交分享服务。（中国市场巨大，本地化的社交分享服务可以是用户有效地分享信息。从而提高我们的知名度。）
 支付手段（没有针对中国用户的支付宝支付手段，stripe）
 网页加载速度慢：
-![alt tag](https://github.com/jcdby/Answer/blob/master／Screen Shot 2016-11-24 at 1.38.01 PM.png)
+![alt tag](https://github.com/jcdby/Answer/blob/master/Screen Shot 2016-11-24 at 1.38.01 PM.png)
+上图是主页加载时的所需时间，等待了将近一秒（经过多次测试，几乎达到了平均800ms的样子。）
 1.使用css sprites，减少网站对图片的下载请求，以此提高网页的load speed
 2.使用Expire标签，减少网站对图片的下载请求。
 
@@ -40,6 +51,15 @@ customer happiness > time > budget > best priactices.
 #FE
 ##1.If you were starting a new project and could choose a frontend framework (Backbone, React, Angular, etc), which would you choose and why? Particularly, what makes this framework better than other choices?
 
+
+只是用过react和angular2.
+
+angular2:
+对于开发者亲切：MVC模式，更加OOP， 整套前段解决方案，HTML-中心（阅读性强）link：http://jixianqianduan.com/article-translation/2016/04/07/react-vs-angular2-fight-rages-on.html
+
+
+
+react是view 类库，缺乏整套前段技术支持（学习flux，redux难度增加。函数式思考方式）。jsx学习（javascript中心）。
 我会选择React. Reactjs不仅是一种前端框架，更是一种方式。在工作中，我深深地体会到了什么叫做Learn Once, Write Anywhere。（复用， reactjs和react native的使用）
 virtual DOM: 提高renderring速度。
 
