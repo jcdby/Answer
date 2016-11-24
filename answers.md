@@ -11,7 +11,14 @@
 
 ##2.Given the following variables: time, budget, customer happiness and best practices which are most important in a project? Give them an order and explain why based on your experience。
 在有限的时间和金钱情况下，使用已经得到认可的最佳实践，最大限度减少开发时间和开发成本，以此最大限度地获得用户满足度。
-站在
+时间和金钱是对用户的承诺。
+使用者满意度是对产品使用者的承诺。
+最佳时间是减少开发时间，减少开发错误，提高用户体验的一种方法。
+
+在这里的customer是指产品的用户，还是指产品的直接使用者？假设是
+
+customer happiness > time > budget > best priactices.
+产品的终极目的是满足用户的需求。若是达不到用户的需求，那一定是失败的产品。就像用户需要的是苹果，你费力做了一个梨，你的梨再甜，也是失败的产品。所以我认为当启动一个产品项目时，应该首先定下产品的用户满足度。
 
 
 
@@ -19,8 +26,13 @@
 ##3.What do you dislike about our website/product/service? How would you improve it? Which of those changes would likely have the biggest customer benefit?
 关于网站两点： 
 没有中国相关社交分享服务。（中国市场巨大，本地化的社交分享服务可以是用户有效地分享信息。从而提高我们的知名度。）
-网页加载速度慢
 支付手段（没有针对中国用户的支付宝支付手段，stripe）
+网页加载速度慢：
+1.使用css sprites，减少网站对图片的下载请求，以此提高网页的load speed
+2.使用Expire标签，减少网站对图片的下载请求。
+
+
+
 
 
 
@@ -48,6 +60,28 @@ response.setDateHeader("Expires",date.getTime()+10000);
 response.addHeader( "Cache-Control", "max-age=10" ); 
 //设置修改时间
 response.setDateHeader("Last-Modified",date.getTime());
+
+
+
+请求数量
+
+合并脚本和样式表，CSS Sprites，拆分初始化负载，划分主域
+
+请求带宽
+
+开启GZip，精简JavaScript，移除重复脚本，图像优化
+
+缓存利用
+
+使用CDN，使用外部JavaScript和CSS，添加Expires头，减少DNS查找，配置ETag，使AjaX可缓存
+
+页面结构
+
+将样式表放在顶部，将脚本放在底部，尽早刷新文档的输出
+
+代码校验
+
+避免CSS表达式，避免重定向
 
 
 ##3.What are the advantages of client side rendering vs. server side rendering? If you were building our site which would you use and why?
