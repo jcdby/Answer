@@ -1,6 +1,6 @@
 
 #Common
-1.Select one of following keyword why you are applying for the job
+##1.Select one of following keyword why you are applying for the job
   1.technical curiosity
   2.developer fame
   3.working for famous company
@@ -9,14 +9,14 @@
   6.experience in new area
   7.(your choice)
 
-2.Given the following variables: time, budget, customer happiness and best practices which are most important in a project? Give them an order and explain why based on your experience。
+##2.Given the following variables: time, budget, customer happiness and best practices which are most important in a project? Give them an order and explain why based on your experience。
 在有限的时间和金钱情况下，使用已经得到认可的最佳实践，最大限度减少开发时间和开发成本，以此最大限度地获得用户满足度。
 站在
 
 
 
 
-3.What do you dislike about our website/product/service? How would you improve it? Which of those changes would likely have the biggest customer benefit?
+##3.What do you dislike about our website/product/service? How would you improve it? Which of those changes would likely have the biggest customer benefit?
 关于网站两点： 
 没有中国相关社交分享服务。（中国市场巨大，本地化的社交分享服务可以是用户有效地分享信息。从而提高我们的知名度。）
 网页加载速度慢
@@ -25,7 +25,7 @@
 
 
 #FE
-If you were starting a new project and could choose a frontend framework (Backbone, React, Angular, etc), which would you choose and why? Particularly, what makes this framework better than other choices?
+##1.If you were starting a new project and could choose a frontend framework (Backbone, React, Angular, etc), which would you choose and why? Particularly, what makes this framework better than other choices?
 
 我会选择React. Reactjs不仅是一种前端框架，更是一种方式。在工作中，我深深地体会到了什么叫做Learn Once, Write Anywhere。（复用， reactjs和react native的使用）
 virtual DOM: 提高renderring速度。
@@ -35,7 +35,7 @@ virtual DOM: 提高renderring速度。
 
 为什么选择React而不是其它框架。首先看google的trend比较。react以压倒性的优势领先其它的框架。
 
-Describe 3 to 5 ways you haved improve page load time on your experience. Describe as detailed as possible
+##2.Describe 3 to 5 ways you haved improve page load time on your experience. Describe as detailed as possible
 
 spa的情况，尽量把静态内容页面，没有用户交互的页面使用server rendering 的方式加载。
 下面是在JAVA代码中设置这些参数的方法：
@@ -50,7 +50,7 @@ response.addHeader( "Cache-Control", "max-age=10" );
 response.setDateHeader("Last-Modified",date.getTime());
 
 
-What are the advantages of client side rendering vs. server side rendering? If you were building our site which would you use and why?
+##3.What are the advantages of client side rendering vs. server side rendering? If you were building our site which would you use and why?
 
 client rendering比较server side rendering的优点： 对于用户的每次交互，省去了网络通信。提高用户体验。用户会得到更快的反馈。也因此减少了服务器的负担。slow once fast later. 主要用于交互多，有一定的bussness logic的web app。用户不会关心网站是client rendering 还是server rendering.用户只考虑是否能在最短的时间内获得最准确的信息和良好简洁的交互。
 
