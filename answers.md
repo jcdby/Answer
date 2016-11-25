@@ -6,7 +6,7 @@
   3. working for famous company
   4. jumping on a ‘Rocket’
   5. make tons of money
-  -6. experience in new area
+  6. experience in new area（选择）
   7. (your choice)
 
 ##2. Given the following variables: time, budget, customer happiness and best practices which are most important in a project? Give them an order and explain why based on your experience。
