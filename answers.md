@@ -1,15 +1,15 @@
 
 #Common
-##1.Select one of following keyword why you are applying for the job
-  1.technical curiosity
-  2.developer fame
-  3.working for famous company
-  4.jumping on a ‘Rocket’
-  5.make tons of money
-  -6.experience in new area
-  7.(your choice)
+##1. Select one of following keyword why you are applying for the job
+  1. technical curiosity
+  2. developer fame
+  3. working for famous company
+  4. jumping on a ‘Rocket’
+  5. make tons of money
+  -6. experience in new area
+  7. (your choice)
 
-##2.Given the following variables: time, budget, customer happiness and best practices which are most important in a project? Give them an order and explain why based on your experience。
+##2. Given the following variables: time, budget, customer happiness and best practices which are most important in a project? Give them an order and explain why based on your experience。
 在有限的时间和金钱情况下，使用已经得到认可的最佳实践，最大限度减少开发时间和开发成本，以此最大限度地获得用户满足度。
 时间和金钱是对用户的承诺。
 使用者满意度是对产品使用者的承诺。
@@ -33,11 +33,11 @@ best practices是满足以上条件的手段。合适的best practice可以有�
 
 
 
-##3.What do you dislike about our website/product/service? How would you improve it? Which of those changes would likely have the biggest customer benefit?
+##3. What do you dislike about our website/product/service? How would you improve it? Which of those changes would likely have the biggest customer benefit?
 关于网站两点： 
 没有中国相关社交分享服务。（中国市场巨大，本地化的社交分享服务可以是用户有效地分享信息。从而提高我们的知名度。）
 支付手段（没有针对中国用户的支付宝支付手段，stripe）
-以上两个问题的解决方案：雇佣一个有中国本地社交分享api开发经验的中国开发者（我是其中一个有力竞争者）。
+以上两个问题的解决方案：雇佣一个有中国本地社交分享api开发经验的中国开发者（我是其中一个有力竞争者，曾经使用过weibo api。尝试过使用QQ和wetchat api，但是要想使用这两个api的话，必须要有中国公司运行许可证）。
 首先，众所周知，在中国无法使用fb和推特。当一个用户发起make，想分享时，由于没有本地的社交分享的支持，将会面临一系列的不方便，用户体验不高，无法通过分享扩大公司的影响力， 无法建立中国本土粉丝生态圈。支付手段同上，没有本土支付手段支持的话，将会给很多想支付的用户带来不方便。所以解决了以上两个问题以后，用户可以通过本地的分享，使更多的人参与到make活动中来，而本土化的便捷支付手段则能够让更多的用户为自己的明星make活动付费。
 网页加载速度慢：
 ![alt tag](https://github.com/jcdby/Answer/blob/master/Screen Shot 2016-11-24 at 1.38.01 PM.png)
@@ -55,32 +55,50 @@ best practices是满足以上条件的手段。合适的best practice可以有�
 
 
 #FE
-##1.If you were starting a new project and could choose a frontend framework (Backbone, React, Angular, etc), which would you choose and why? Particularly, what makes this framework better than other choices?
+##1. If you were starting a new project and could choose a frontend framework (Backbone, React, Angular, etc), which would you choose and why? Particularly, what makes this framework better than other choices?
 
 ![alt tag](https://github.com/jcdby/Answer/blob/master/Screen Shot 2016-11-24 at 8.23.40 PM.png)
 从最新的谷歌趋势图可以看到，在backbonejs, polymerjs,angular2, reactjs,knockoutjs的比较中，react和angular是较为流行的。更多的开发者使用，意味着开发社区更佳活跃，遇到相关问题时，可以获得更多的支持；更多开发者使用，也体现了开发者对其的认可（性能，生产性，架构等方面。），所以如果我正好要开始一个新的项目时，我就会从最流行的框架中去选择。正好我在过去的开发过程中使用过react和angular2，我会选择angular2.
 
 
-其实react和angular2没法相比。react是view端的类库，而angular2是一整套前端框架，包括完整程序所应该有的所有模块。这一点也是选择angular2的一个重要原因，你不必像react一样要为选择flux还是redux而苦恼，也不用考虑是选择birdblue还是fetch苦恼。
 
-angular2:
-对于开发者亲切：MVC模式，更加OOP， 整套前段解决方案，HTML-中心（阅读性强）link：http://jixianqianduan.com/article-translation/2016/04/07/react-vs-angular2-fight-rages-on.html
+1. 学习成本，选择成本低
+其实react和angular2没法相比。react是view端的类库，而angular2是一整套前端框架，包括完整程序所应该有的所有模块。这一点也是选择angular2的一个重要原因，你不必像react一样要为选择flux还是redux而苦恼，也不用考虑是选择birdblue还是fetch苦恼。angular2的官方文档已经详细介绍使用angular2的pattern和相关module支持，而且有详尽的教程帮助开发者熟悉angular2开发。
 
+在实际学习过程中发现，学习angular2的时间要大大小于学习reactjs的时间。就如上文所说，使用react做spa，你得考虑很多的事情，比如，是否应用flux还是应用MVC， MVVC，blabla；如是选择flux，你又得考虑，是选择自己实现flux，还是使用现成的flux实现（redux，等flux实现类库）。选择好了具体pattetn后， 若不是MVC pattern而是flux pattern的话，你又将面临flux pattern的学习成本，或redux的学习成本。特别是当你选择了redux，那就意味着你选择了函数式编程范式，这时候，你又得从OOP大脑转换成FFP大脑。在工作中发现，越是具有OOP思想的人，想改用FFP编程是一件非常费时费力的事情。因为具有OOP大脑的人，当遇到要解决问题的时候，首先会想到相应问题的客体，和相应课题具备的属性和行为，这一切都与FFP思想相异。
 
-
-react是view 类库，缺乏整套前段技术支持（学习flux，redux难度增加。函数式思考方式）。jsx学习（javascript中心）。
-我会选择React. Reactjs不仅是一种前端框架，更是一种方式。在工作中，我深深地体会到了什么叫做Learn Once, Write Anywhere。（复用， reactjs和react native的使用）
-virtual DOM: 提高renderring速度。
+你会发现开发者选择angular2会节约相当长的学习时间（我本身自己使用了1周左右熟悉了angular2， 而reactjs和redux, flux则花了将近一个月甚至更长时间熟悉。）。你不需要考虑使用哪一个Router Module， Pattern， API module等等，就像你买了个Mac，开箱就能工作啦～
 
 
+2. HTML-中心，增加团队分工合作和代码阅读性（个人体会）
+Angular2 和 React的模版书写方式不同。
+angular2的方式：
+```javascript
+  <template ngFor #todo [ngForOf]="todoList | todosFilter:filter">
+    <li [todo]="todo"></li>
+  </template>
+```
+react的方式：
+```typescript
+   render(): JSX.Element {
+        return (
+            <ul className="todo-list">
+                {todosFilter(this.props.todoList, this.props.filter)
+                    .map(todo => <Todo todo={todo} key={todo.id} />)}
+            </ul>
+        );
+    }
+```
+
+这两种方式谁好谁坏因人而异，本人喜欢angular2的方式。因为更加像html文档，在我看来阅读性更强。这种方式的不同亦即是Imperative和Declarative编程方式的不同。我相信现今更多的HTML markup开发者更适应declarative的编程方式。在以前的工作经验中，由于markup开发者不熟悉react的javascript式的模版书写方式，导致markup开发者不得不用Jquery+Html的方式先写一遍UI和UI logic，然后再交给我们把他们的工作物转换成react文档。在这个工程中，浪费了开发时间，而且导致非常容易出错， 特别是对于新的团队来说（成熟的团队由于沟通的高效，错误率会相对少一点）。但是使用Angular2的书写方式，则会相应改善上述问题。毕竟对于markup开发者来说，是熟悉的方式。他们会很快学会angular2模版的书写方式，这样会大大提高开发时间，合作也成为可能。
+
+3. Angular2天然拥抱OOP，MVC,系统架构更佳清晰
+OOP相对于FFP最大的好处就是让系统的架构更佳利于人类思考方式理解。一个容易被开发者理解的架构将会减少更多错误的发生。虽然你也可以在React里面使用OOP，但是官方建议是使用Flux和Redux。你使用了Redux就会知道，你在架构系统时，你不可能以OOP的方式去架构，你会首先想data structure，函数等等。当函数的数量极大增加时，管理就会出现问题。而且，在redux中，每一个远程API呼出，都必须要写3个action，分别为开始抓去数据，数据成功，数据失败，复杂度升高。而且当action的数量变大时，管理也会成为问题。你不知道你要写的action之前是否会重复。而天然拥抱OOP的angular2则没有这些问题，因为系统架构按照客体来组织，开发者理解系统更佳容易。
+
+当然React和相应的flux也有其自身的特点，比如渲染速度，性能，还有类库的大小等都很优越，但在我选择的时候，我更看重开发者的开发效率和方便性，有效率也就意味着更快的开发速度和更少的错误。
 
 
-
-
-
-
-
-##2.Describe 3 to 5 ways you haved improve page load time on your experience. Describe as detailed as possible
+##2. Describe 3 to 5 ways you haved improve page load time on your experience. Describe as detailed as possible
 
 spa的情况，尽量把静态内容页面，没有用户交互的页面使用server rendering 的方式加载。
 下面是在JAVA代码中设置这些参数的方法：
@@ -117,7 +135,7 @@ response.setDateHeader("Last-Modified",date.getTime());
 避免CSS表达式，避免重定向
 
 
-##3.What are the advantages of client side rendering vs. server side rendering? If you were building our site which would you use and why?
+##3. What are the advantages of client side rendering vs. server side rendering? If you were building our site which would you use and why?
 
 client rendering比较server side rendering的优点： 对于用户的每次交互，省去了网络通信。提高用户体验。用户会得到更快的反馈。也因此减少了服务器的负担。slow once fast later. 主要用于交互多，有一定的bussness logic的web app。用户不会关心网站是client rendering 还是server rendering.用户只考虑是否能在最短的时间内获得最准确的信息和良好简洁的交互。
 
