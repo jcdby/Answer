@@ -25,7 +25,7 @@ customer happiness > time > budget > best priactices.
 
 所以遵守通过customer happiness 计算出来的时间就自然排在了第二位。时间就是金钱，延长开发时间就是增加开发经费。增加开发费用就无法使customer happy（对于经费固定的情况，增加开发时间，就是减少开发者的收入。）。违反了第一条。所以在计算开发时间时，需要充分分析用户需求。在开发时间有限的情况下，customer happiness也是最重要的。不能使customer高兴，就算遵守了时间完成了项目，也是失败的产品（苹果和梨）。在开发时间有限的情况下，我们更应该仔细分析用户需求，设定customer happiness范围和优先度，以此来规划产品项目。
 
-把经费排在第三位主要是考虑到，时间是不可再生资源，经费可以通过一些手段获得。
+经费和时间比较类似，都是应该在充分分析用户需求的情况下计算出来。之所以把经费排在时间的后面是因为，在满足customer happiness的情况下，超出经费的话，虽然不会引起用户的不满，但是会引起老板的不满。而超过时间没有上线产品的话，不仅会让老板不满，更会让期待产品的用户不满，也就将违反第一条。
 
 best practices是满足以上条件的手段。合适的best practice可以有效地节约开发者的开发时间，减小产品的错误率，提高产品的质量等。但是，假设，我们要做的产品前无古人，还没有任何best practice，那么还将回归到分析customer hapiness的阶段去。就算有很多的practice，要找到合适的best practice也是要回归到分析用户需求和开发团队等因素中去。所以best practice是充分不必要条件。
 
@@ -100,6 +100,12 @@ OOP相对于FFP最大的好处就是让系统的架构更佳利于人类思考�
 
 ##2. Describe 3 to 5 ways you haved improve page load time on your experience. Describe as detailed as possible
 
+说实话，之前并没有优化页面load时间的经验。在工作中也正好遇到了要解决页面加载时间问题，所以把整理出来的方法和我的看法整理如下。
+
+1. 尽可能的减少服务器请求。
+很多时候，发起请求到开始下载的等待时间大于下载的时间。合并js和css文件，使用css sprites合并图片。
+2. 使用缓存tag
+给不常变化的静态文件加上缓存tag。java情况如下。
 spa的情况，尽量把静态内容页面，没有用户交互的页面使用server rendering 的方式加载。
 下面是在JAVA代码中设置这些参数的方法：
 //不允许浏览器端或缓存服务器缓存当前页面信息。    
@@ -111,6 +117,15 @@ response.setDateHeader("Expires",date.getTime()+10000);
 response.addHeader( "Cache-Control", "max-age=10" ); 
 //设置修改时间
 response.setDateHeader("Last-Modified",date.getTime());
+我认为对于像公司logo这样的图像可以设置很长的缓存时间，所以设置Expire和cache-control比较好。在Expire和cache-control中，我偏向于使用cache-control,因为cache-control使用的是相对时间过期，保证过期时间的准确性。由于cache-control具有更高的优先级，所以我偏向于同时写下两个标签，以应对不支持cache-control标签的时候。这两个标签不需要向服务器请求，会大大节约page load时间。但同时也会带来一定的问题。比如说在过期时间内，更新了资源，如何保证客户端能够拿到最新的资源。所以，在设置过期时间之前，一定要充分分析资源的性质。像logo这些资源可以设置一个相对较长的时间。而像内容相关的图片，由于经常会变化，所以设置为一天或者一周比较合理。
+
+对于last-modified和etag标签，Etag
+
+3. 使用Gzip
+Gzip压缩是相当不错的。最大可以压缩70%的大小。大大缩减了资源的网络传输速度。若我要改善page load time的话，我会让服务器支持gzip压缩。根据浏览器请求头文件的Accept-Encoding信息判断是否需要response压缩的资源。
+
+4. 将css放在顶部，js放在底部。减少inline style，inline js。
+不用解释，就是best practice
 
 
 
