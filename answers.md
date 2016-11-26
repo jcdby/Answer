@@ -177,12 +177,12 @@ client side renderting的优点：
 3. 使用json接收传输数据，节省网络通信。
   传输json比传输html更佳高效。client side rendering的情况，当页面data需要发生变化时，所有的logic发生在客户端，网络通信只是仅仅json data 的下载。 而server side rendering的流程时，用户发起一个事件， 通过http传达给server， server端根据相应时间，在server处理，获取数据，然后渲染，再通过http把渲染好的html传递回客户端。
 4. 语言一致性
-  使用过jsp + jquery组合的开发者，都应该经历过
+  使用过jsp + jquery组合的开发者， 都应该体会过，语言不一致带来的麻烦。对同一数据的处理，开发者得知道不同语言的处理方式。最重要的是，这样书写，使得系统的架构显得尤为混乱， 不容易理解。
 
-如果我来搭建网站的话，我会使用client side rendering的方式。首先，server side rendering对于client side rendering的优点，由于Universal app（Angular Universal）的出现全部消失掉。 
+如果我来搭建网站的话，我会使用client side rendering的方式。出了上述client side rendering的好处以外，server side rendering对于client side rendering的优点，由于Universal app（Angular Universal）的出现全部消失掉。 
 
 1. SEO
-Universal app 实现了Server Rendering和Client Rendering的结合。 当crawler第一次请求某网页时，universal app会首先在服务器为特定的route生成html页面。这样，不管crawler点击任何link，都会获取一个html 文档。保证了SEO。
+Universal app 实现了Server Rendering和Client Rendering的结合。 当crawler第一次请求某网页时，universal app会首先在服务器为特定的route生成html页面。这样，不管crawler点击任何link，都会获取一个html 文档。保证了SEO。 另外，Google now crawls JavaScript-rendered content just fine. 所以没有必要再为了SEO选择server render而失去用户体验（虽然开发者的工作变得更佳麻烦）。
 
 2. The initial load time.
 由于Universal app 实现了各个route的server rendering，在用户看来，就好像和server render一样马上见到了html，提高了用户的感知体验，虽然app payload在后台下载。
